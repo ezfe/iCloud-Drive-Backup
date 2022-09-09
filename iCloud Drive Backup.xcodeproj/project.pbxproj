@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		665BA03328CADDB6005FC24C /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 665BA03228CADDB6005FC24C /* DequeModule */; };
 		666386F228BACF5D00F7BD88 /* iCloud_Drive_BackupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666386F128BACF5D00F7BD88 /* iCloud_Drive_BackupApp.swift */; };
 		666386F428BACF5D00F7BD88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666386F328BACF5D00F7BD88 /* ContentView.swift */; };
 		666386F628BACF5F00F7BD88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666386F528BACF5F00F7BD88 /* Assets.xcassets */; };
 		666386F928BACF5F00F7BD88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666386F828BACF5F00F7BD88 /* Preview Assets.xcassets */; };
+		6663870128BACFD800F7BD88 /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663870028BACFD800F7BD88 /* BackupManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		666386F528BACF5F00F7BD88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		666386F828BACF5F00F7BD88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		666386FA28BACF5F00F7BD88 /* iCloud_Drive_Backup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloud_Drive_Backup.entitlements; sourceTree = "<group>"; };
+		6663870028BACFD800F7BD88 /* BackupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665BA03328CADDB6005FC24C /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				666386F128BACF5D00F7BD88 /* iCloud_Drive_BackupApp.swift */,
 				666386F328BACF5D00F7BD88 /* ContentView.swift */,
+				6663870028BACFD800F7BD88 /* BackupManager.swift */,
 				666386F528BACF5F00F7BD88 /* Assets.xcassets */,
 				666386FA28BACF5F00F7BD88 /* iCloud_Drive_Backup.entitlements */,
 				666386F728BACF5F00F7BD88 /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = "iCloud Drive Backup";
+			packageProductDependencies = (
+				665BA03228CADDB6005FC24C /* DequeModule */,
+			);
 			productName = "iCloud Drive Backup";
 			productReference = 666386EE28BACF5D00F7BD88 /* iCloud Drive Backup.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 666386E528BACF5D00F7BD88;
+			packageReferences = (
+				665BA03128CADDB5005FC24C /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 666386EF28BACF5D00F7BD88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				666386F428BACF5D00F7BD88 /* ContentView.swift in Sources */,
+				6663870128BACFD800F7BD88 /* BackupManager.swift in Sources */,
 				666386F228BACF5D00F7BD88 /* iCloud_Drive_BackupApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +291,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.ezekiel.iCloud-Drive-Backup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +319,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.ezekiel.iCloud-Drive-Backup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		665BA03128CADDB5005FC24C /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		665BA03228CADDB6005FC24C /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 665BA03128CADDB5005FC24C /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 666386E628BACF5D00F7BD88 /* Project object */;
 }

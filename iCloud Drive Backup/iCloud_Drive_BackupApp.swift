@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct iCloud_Drive_BackupApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	var body: some Scene {
+		WindowGroup {
+			ContentView()
+		}
+	}
 }
